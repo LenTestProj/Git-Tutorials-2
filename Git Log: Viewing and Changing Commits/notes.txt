@@ -1,0 +1,20 @@
+11. Git Log: Viewing and Changing Commits in Git
+i. type 'git log -p' to see all commits along with the diffs meaning changes that have occured in the commits.
+
+ii. To check only the details of the first two or three for example we type 'git log -p -3'
+
+iii. If we type 'git log --stat' we get the commits alongwith the fiel changes in the commmit'
+
+iv: To view all commmits in one page i.e. in shortest form we type 'git log --pretty=oneline'
+
+v: To view all commits in brief i.e. in short form we type 'git log --pretty=short'. It shows only author and commit.
+
+vi: If we type 'git log --pretty=full' we get lil more info as compared to previous command. we get author, commit(the person who commited the message) adn lastly the commit message.
+
+vii: To check the commits for the last two days we type 'git log --since=2.days', for last months we type 'git log --since=2.months' and for two years we type 'git log --since=2.years'
+
+viii. More formatting commands include:
+-> 'git log --pretty="%h --%an"' where an refers to author name
+-> 'git log --pretty="%h --%ae"' where ae refers to author name
+
+ix: To ammend a previous commmit we type 'git commit --ammend' and then modify and save that commit

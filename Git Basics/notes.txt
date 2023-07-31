@@ -1,0 +1,59 @@
+1. Tracking Our first Git Project.
+i. git init -> initialize git repository
+ii. git status -> check git status
+iii. git add . -> stage all the files
+iv. git add "filename" -> stage only that file 
+v. git commit -m "message" -> commit the staged files.
+
+
+
+2.Ignoring files in Git
+i. create a file named .gitignore and mention the names of files and folders that you dont want to stage.
+
+ii. in gitignore in order to ignore all files of a particular type i.e. '.log' then type "*.log" in gitignore 
+
+iii. to ignore a folder name type 'foldername/' in gitignore
+
+iv. to ignore a folder name only in the outer directory type '/foldername/' in gitignore
+
+
+3. Git DIFF: showing chnages between commits/staging area adn working directory
+i. You edit a file 'test.txt' and then type 'git add .' Later you modify the file and type 'git status' you find the file modified. You type 'git diff' to check the difference bvetween the two files
+
+ii. To check the the commits previous to the latest stageyou type "git diff --staged"
+
+
+4.Skipping the staged area
+i. if there is a modifed file and a new untracked file then when you run this command "git commit -a -m 'skipped stage area'"
+
+
+5.Moving and renaming files in git
+i. if you rename an existing file and type git status, it says deleted one file and created a new file.
+
+ii. if you then type 'git add .' and then type 'git status' you get the message the file has been renamed to a new file.
+
+iii. if you delete a file manually and type git status, it shows the message 'deleted file.txt' and then you have to manually type 'git add .' to proceed further.
+
+iv. whereas if you type 'git rm filename.txt' you dont need to add 'git add .' to proceed further. 
+
+v. If you add a staged file to gitignore and then commit all changes everyhting is fine. But when you edit that particular staged file and type 'git status' you get the message 'modified that particular file'
+
+vi. In order to remove the file from the staged area you have to type 'r git rm --cached "filename"'
+
+
+12. Unstaging and unmodifying commmits in Git 
+i. In order to unstage a file that was just staged we type the command 'git reset HEAD filename'
+
+ii. If you have changed a file y mistake and want to restore the contents from the previous commit we type the message 'git checkout -- filename'
+
+iii. If you need all the changes from the previous commit you type the command 'git checkout -f'. You might lose some contents that you are currently working with but will restore everything from the previous commit.
+
+
+13. Setting Alias in Git
+i. To set an alias for git commands we type the following
+'git config --global alias.st status'
+-> This command sets up an alias for git status command
+
+
+14: Creating and Switching branches in git
+i. switch to new branch we type 'git checkout -b "newBranchName"'
